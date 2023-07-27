@@ -23,15 +23,6 @@ function App() {
       console.error('Error pushing data:', error);
     }
   }
-
-  useEffect(() => {
-    load()
-  }, [])
-  const load = async () => {
-    client.getSpace(spaceId).then((data: any) => {
-      console.log(data)
-    })
-  }
   return (
     <>
       <form onSubmit={handleSubmit}>
